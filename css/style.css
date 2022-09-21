@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap");
+
+:root {
+  --white-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+}
+
+.app {
+  max-width: 500px;
+  width: 70vw;
+  margin: 50px auto;
+  color: var(--white-color);
+}
+
+h1 {
+  font-family: Rajdhani, sans-serif;
+  text-align: center;
+  font-size: 40px;
+  background-color: #de3f53;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.app form {
+  display: flex;
+}
+
+.app form input[type="text"] {
+  width: 80%;
+  height: 50px;
+  border: none;
+  background-color: #3c4979;
+  color: var(--white-color);
+  outline: none;
+  caret-color: var(--white-color);
+  padding-left: 10px;
+  font-size: 18px;
+  hyphenate-character: auto;
+}
+
+.app button {
+  width: 20%;
+  height: 50px;
+  border: none;
+  background-color: #1dd2af;
+  outline: none;
+  color: var(--white-color);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.tasks {
+  list-style: none;
+}
+
+.tasks li {
+  background-color: #262e4c;
+  color: var(--white-color);
+  display: flex;
+  padding: 10px;
+  position: relative;
+}
+
+.tasks li input[type="checkbox"] {
+  -webkit-appearance: none;
+  width: 1.2em;
+  height: 1.2em;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.tasks li input[type="checkbox"]:checked {
+  background-color: rgb(0, 191, 255);
+}
+
+.tasks li input:checked + span {
+  color: rgba(192, 192, 192, 0.8);
+  text-decoration: line-through;
+}
+
+.tasks li input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translateY(-50%);
+  transform: rotate(-45deg);
+  height: 0.3em;
+  width: 0.5em;
+  border: 2px solid white;
+  border-style: none none solid solid;
+  z-index: 2;
+}
+
+.tasks li > span {
+  display: inline-block;
+  width: 50%;
+  margin-left: 20px;
+  padding-left: 15px;
+  font-size: 18px;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: none;
+}
+
+.tasks li i {
+  position: absolute;
+  right: 10px;
+}
+
+.tasks li i:hover {
+  color: #de3f53;
+}
